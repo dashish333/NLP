@@ -5,6 +5,6 @@ for a word w in named entity recognition:
 3. get_labels(doc) - generate list of labels for each document
 
 References:
-[1] http://www.albertauyeung.com/ 
-[2] http://pages.cs.wisc.edu/~jerryzhu/cs838/CRF.pdf
-[3] https://www.youtube.com/watch?v=rc3YDj5GiVM
+[1] http://www.albertauyeung.com/  <br>
+[2] http://pages.cs.wisc.edu/~jerryzhu/cs838/CRF.pdf <br>
+[3] https://www.youtube.com/watch?v=rc3YDj5GiVM <br>
