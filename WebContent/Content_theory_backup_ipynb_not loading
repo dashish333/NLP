@@ -1,5 +1,5 @@
-Please note-  I have attached the theory part as I'm facing challenge as .ipynb file is not getting loaded over github and hence contetn not visible.
-This is just a reference and the actual content looks a little different along with code in ipynb file.
+Please note-  I have attached the theory part as .ipynb file is not getting loaded over github when I tried viewing 
+it.This is just a reference and the actual content looks a little different along with code in ipynb file.
 
 # Conditional Random Fields
 In NLP, it is a common task to extract words/ phrases of particular types from a given sentence or paragraph. For example, when performing analysis of a corpus of travel articles, we may want to know which travelling destination are mentioned in the articles, and how many articles are related to each of these travelling document.
