@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+    <Document id="1">
+    <DocumentURI></DocumentURI>
+    <DocumentSource></DocumentSource>
+    <TextWithNamedEntities>
+      <NamedEntityInText>TajMahal</NamedEntityInText>
+      <SimpleTextPart> is in </SimpleTextPart>
+      <NamedEntityInText>Agra</NamedEntityInText>
+      <SimpleTextPart> in </SimpleTextPart>
+      <NamedEntityInText>Uttar Pradesh</NamedEntityInText>
+      <SimpleTextPart> which is a state in </SimpleTextPart>
+      <NamedEntityInText>North India</NamedEntityInText>
+    </TextWithNamedEntities>
+  </Document>
+    <Document id="2">
+    <DocumentURI></DocumentURI>
+    <DocumentSource></DocumentSource>
+    <TextWithNamedEntities>
+      <NamedEntityInText>TajMahal</NamedEntityInText>
+      <SimpleTextPart> is </SimpleTextPart>
+      <NamedEntityInText>a</NamedEntityInText>
+      <NamedEntityInText>Tea</NamedEntityInText>
+      <SimpleTextPart>product sold in</SimpleTextPart>
+      <NamedEntityInText>India</NamedEntityInText>
+    </TextWithNamedEntities>
+  </Document>
+    <Document id="3">
+    <DocumentURI></DocumentURI>
+    <DocumentSource></DocumentSource>
+    <TextWithNamedEntities>
+      <NamedEntityInText>Taj Express</NamedEntityInText>
+      <SimpleTextPart> is a train running from </SimpleTextPart>
+      <NamedEntityInText>Delhi</NamedEntityInText>
+      <SimpleTextPart> to</SimpleTextPart>
+      <NamedEntityInText>Gwalior</NamedEntityInText>
+      <SimpleTextPart> in </SimpleTextPart>
+      <NamedEntityInText>India</NamedEntityInText>  
+    </TextWithNamedEntities>
+    </Document>
+    </corpus>
