@@ -1,0 +1,52 @@
+Please note-  I have attached the theory part as I'm facing difficulty to .ipynd file is not getting loaded over github.
+This is just a reference and the actual content looks a little different along with code in ipynb file.
+
+# Conditional Random Fields
+In NLP, it is a common task to extract words/ phrases of particular types from a given sentence or paragraph. For example, when performing analysis of a corpus of travel articles, we may want to know which travelling destination are mentioned in the articles, and how many articles are related to each of these travelling document.
+Conditional Random Fields are discriminative model used for predicting the sequence of labels.
+
+It uses information from the context through previous labels and thus helping the model in turn to make better prediction for unseen text/word etc.This technqiue can be very well used for Name Entity Recognition(NER), which is to give a accurate label to given word(incase of NLP).
+
+For Example:
+∙"Shahjahan went to see Taj Mahal"∙"Shahjahan went to see Taj Mahal"  - in this example the  Taj MahalTaj Mahal  can be location representing a monument in Agra or can correspond to Tea Bags.
+∙"This Apple product is one in its segment"∙"This Apple product is one in its segment"  - now here should the word Apple is to be associated with the Apple(Tech company) or a food item.
+Hence, given a sequence of words identifying the correct sequence of labels is the problem to be solved and depending upon the problem finding the correct sequence of label, where label can be  person,location,organization,etcperson,location,organization,etc  for instance. So, the CRF can solve these kind of problem which is a challenging task for the old traditional graphical models like  HMM⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯HMM_  or  MaxEnt⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯MaxEnt_ .
+
+Let's try to understand through a bit more theory first and then I'll give a small implementation of CRF.I'll highlight few of the keywords discussed above first.
+Discriminative Model:
+In Machine Learning we have two different types of modelling technqiue.
+∙∙  Discriminative - Logistic Regression, classifier based on Maximum Likelihood Estimation
+∙∙  Generative - Naive Bayes is popular and simple probablistic classifier
+CRF Model: A special case of undirected graphical model.
+So, the basic crux of the CRF is to generate labels given huge amount of data where the input data is sequential. Also we consider previous context while making a prediction for given data point. 
+
+∙∙ Let  WW  be the tokens in the document and  wiwi  be the corresponding word observed. 
+∙∙   yiyi  be the hidden label.
+The conditional distribtuion is modeled as: 
+ŷ =argmaxyP(y|x)
+y^=argmaxyP(y|x)
+ 
+
+
+To model the appropriate behaviour of CRF we need a {feature function} which have the below parameters:
+∙∙  Set of Input Vectors - W 
+∙∙  i - the word for which we want to predict label
+∙∙  Label for data points  w1:i−1w1:i−1 
+∙∙  label of point  ii  in W 
+The feature functions are the key components of CRF and in our special case of linear-chain CRF, and the general form is:
+f1(yi−1,yi,w1:N,i)
+f1(yi−1,yi,w1:N,i)
+ 
+which looks at a pair of adjacent labels  yi−1yi−1 ,  yiyi , the whole input sequence  w1:Nw1:N  , and the current position  ii . 
+
+For Ex: we can define a simple feature function which produces binary values:  11  for the current word is  TajMahalTajMahal , and if the current state  ynyn  is  MonumentMonument .
+Usage of such feature depends on the corresponding weight  λ1λ1 . If the  λ1>0λ1>0  then label  MonumentMonument  is preferred for above example otherwise CRF will try to avoid the label  MonumentMonument  for the text  TajMahalTajMahal 
+CRF vs HMM:
+Although both are used to model sequential data, they are different algorithms.
+Hidden Markov Models are generative, and give output by modeling the joint probability distribution whereeas Conditional Random Fields as mentioned above are discriminative, and model the conditional probability distribution. CRFs don’t rely on the independence assumption (labels are independent of each other), and avoid label bias. One way to look at it is that Hidden Markov Models are a very specific case of Conditional Random Fields, with constant transition probabilities used instead. HMMs are based on Naive Bayes, which we say can be derived from Logistic Regression, from which CRFs are derived.
+CRF Application:
+∙∙  Part-of-Speech Tagging (POS).
+∙∙  Named Entity Recognition.
+∙∙  Image segmentation
+Disadvantage:
+Highly computational cost as well as complexity at the training stage of the algorithm. Re-training on new data is difficult.¶
