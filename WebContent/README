@@ -1,3 +1,5 @@
+The code takes "testFile.xml" file as input
+
 Function Utility:
 1. word2feature(doc,i) - Given the POS tags, generate more features for each of the tokens in the dataset.Below are some of the commonly used features
 for a word w in named entity recognition:
